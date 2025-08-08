@@ -13,6 +13,10 @@ const app = express()
 app.use(express.json())
 app.use(cors()) // allow requests from frontend
 
+import productRoutes from './routes/product'
+
+app.use('/api/products', productRoutes)
+
 // API routes
 app.use('/api/auth', authRoutes)
 
